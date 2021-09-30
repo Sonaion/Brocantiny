@@ -1,0 +1,1 @@
+[var x = 4] [var y = next][x * x] 

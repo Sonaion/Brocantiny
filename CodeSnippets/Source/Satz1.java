@@ -1,0 +1,1 @@
+Die Studie umfasst zwei aufeinanderfolgende Experimente.  

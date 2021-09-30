@@ -1,0 +1,7 @@
+[ -> "["
+d -> "aaf"
+D -> "aak"
+M -> "boeke"
+N -> "plox" | "tok" 
+v -> "pel"
+] -> "]"

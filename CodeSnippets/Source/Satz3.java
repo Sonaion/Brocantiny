@@ -1,0 +1,1 @@
+Auf dem Tisch steht ein Bildschirm und ein Blatt Papier.  

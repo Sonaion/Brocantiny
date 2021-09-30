@@ -1,0 +1,1 @@
+[var t = 1242] [var current = [t * t + 4]] [current * t]   

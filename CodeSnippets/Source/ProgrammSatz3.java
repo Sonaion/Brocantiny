@@ -1,0 +1,1 @@
+[var 12 = 12] [var result = 21] 
