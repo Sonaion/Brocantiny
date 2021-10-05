@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2021.2.2),
-    on September 30, 2021, at 17:22
+This experiment was created using PsychoPy3 Experiment Builder (v2021.2.1),
+    on Oktober 05, 2021, at 10:41
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -59,7 +59,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2021.2.2'
+psychopyVersion = '2021.2.1'
 expName = 'Study'  # from the Builder filename that created this script
 expInfo = {'participant': '', 'session': '001'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -75,7 +75,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\jonas\\Documents\\GitHub\\Brocantiny\\Study\\Study_lastrun.py',
+    originPath='C:\\Users\\SE-Chair\\Documents\\GitHub\\Brocantiny\\Study\\Study_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -107,6 +107,28 @@ ioDevice = ioConfig = ioSession = ioServer = eyetracker = None
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
 
+# Initialize components for Routine "CodeStartup"
+CodeStartupClock = core.Clock()
+from EyetrackerUtils.base_functionalities.logger import Logger
+global use_eyetracking
+global logger
+use_eyetracking = True
+logger = None
+if use_eyetracking:
+    logger = Logger("C:/Users/SE-Chair/Documents/GitHub/Brocantiny/Study/data/Eyedata_S" + str(int(expInfo["session"])) + "_P" + str(int(expInfo["participant"])) +".csv")
+    logger.add_key_to_log('left_gaze_point_in_user_coordinate_system')
+    logger.add_key_to_log('left_gaze_point_validity')
+    logger.add_key_to_log('right_gaze_point_validity')
+    logger.add_key_to_log('right_gaze_point_in_user_coordinate_system')
+    logger.add_key_to_log('left_gaze_origin_in_user_coordinate_system')
+    logger.add_key_to_log('right_gaze_origin_in_user_coordinate_system')
+    logger.add_key_to_log('left_gaze_point_on_display_area')
+    logger.add_key_to_log('right_gaze_point_on_display_area')
+    logger.add_key_to_log('system_time_stamp')
+    logger.add_key_to_log('left_pupil_diameter')
+    logger.add_key_to_log('right_pupil_diameter')
+    logger.start_recording()
+
 # Initialize components for Routine "Begrüßung"
 BegrüßungClock = core.Clock()
 text = visual.TextStim(win=win, name='text',
@@ -124,7 +146,7 @@ key_resp_2 = keyboard.Keyboard()
 image = visual.ImageStim(
     win=win,
     name='image', units='pix', 
-    image='C:/Users/jonas/Documents/GitHub/Brocantiny/CodeSnippets/Snippets/Eyetracking.png', mask=None,
+    image='../CodeSnippets/Snippets/Eyetracking.png', mask=None,
     ori=0.0, pos=(0, 0), size=(538, 136),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -455,6 +477,57 @@ key_resp_3 = keyboard.Keyboard()
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
+
+# ------Prepare to start Routine "CodeStartup"-------
+continueRoutine = True
+# update component parameters for each repeat
+# keep track of which components have finished
+CodeStartupComponents = []
+for thisComponent in CodeStartupComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+CodeStartupClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "CodeStartup"-------
+while continueRoutine:
+    # get current time
+    t = CodeStartupClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=CodeStartupClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in CodeStartupComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "CodeStartup"-------
+for thisComponent in CodeStartupComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# the Routine "CodeStartup" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # ------Prepare to start Routine "Begrüßung"-------
 continueRoutine = True
@@ -2193,6 +2266,8 @@ continueRoutine = True
 key_resp_3.keys = []
 key_resp_3.rt = []
 _key_resp_3_allKeys = []
+if use_eyetracker:
+    logger.stop_recording()
 # keep track of which components have finished
 DankeComponents = [text_3, key_resp_3]
 for thisComponent in DankeComponents:

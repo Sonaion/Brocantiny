@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2021.2.2">
+<PsychoPy2experiment encoding="utf-8" version="2021.2.1">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -128,7 +128,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="C:\Users\jonas\Documents\GitHub\Brocantiny\CodeSnippets\Snippets\Eyetracking.png" valType="file"/>
+        <Param name="image" updates="constant" val="..\CodeSnippets\Snippets\Eyetracking.png" valType="file"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="" valType="str"/>
         <Param name="name" updates="None" val="image" valType="code"/>
@@ -734,6 +734,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="code_9">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if use_eyetracker:&amp;#10;    logger.stop_recording()" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_9" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="SatzStartup">
       <CodeComponent name="code">
@@ -754,8 +771,28 @@
         <Param name="name" updates="None" val="code" valType="code"/>
       </CodeComponent>
     </Routine>
+    <Routine name="CodeStartup">
+      <CodeComponent name="code_8">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="from EyetrackerUtils.base_functionalities.logger import Logger&amp;#10;global use_eyetracking&amp;#10;global logger&amp;#10;use_eyetracking = True&amp;#10;logger = None&amp;#10;if use_eyetracking:&amp;#10;    logger = Logger(&quot;C:/Users/SE-Chair/Documents/GitHub/Brocantiny/Study/data/Eyedata_S&quot; + str(int(expInfo[&quot;session&quot;])) + &quot;_P&quot; + str(int(expInfo[&quot;participant&quot;])) +&quot;.csv&quot;)&amp;#10;    logger.add_key_to_log('left_gaze_point_in_user_coordinate_system')&amp;#10;    logger.add_key_to_log('left_gaze_point_validity')&amp;#10;    logger.add_key_to_log('right_gaze_point_validity')&amp;#10;    logger.add_key_to_log('right_gaze_point_in_user_coordinate_system')&amp;#10;    logger.add_key_to_log('left_gaze_origin_in_user_coordinate_system')&amp;#10;    logger.add_key_to_log('right_gaze_origin_in_user_coordinate_system')&amp;#10;    logger.add_key_to_log('left_gaze_point_on_display_area')&amp;#10;    logger.add_key_to_log('right_gaze_point_on_display_area')&amp;#10;    logger.add_key_to_log('system_time_stamp')&amp;#10;    logger.add_key_to_log('left_pupil_diameter')&amp;#10;    logger.add_key_to_log('right_pupil_diameter')&amp;#10;    logger.start_recording()" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_8" valType="code"/>
+      </CodeComponent>
+    </Routine>
   </Routines>
   <Flow>
+    <Routine name="CodeStartup"/>
     <Routine name="Begrüßung"/>
     <Routine name="EyeTrackingText"/>
     <Routine name="SatzStartup"/>
