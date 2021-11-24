@@ -1,0 +1,5 @@
+[let first = 1]
+[let second = 1]
+[let third = first + second]
+[let fourth = second + third]
+[let fifth = third + fourth]

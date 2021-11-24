@@ -1,0 +1,1 @@
+Das neue Kino zeigt Filme, verkauft Popcorn und hat Studierendenrabatt.

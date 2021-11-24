@@ -1,0 +1,1 @@
+Viele Menschen kaufen kein Obst und Gemüse regional in Deutschland.
